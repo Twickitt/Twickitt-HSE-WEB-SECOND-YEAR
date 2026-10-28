@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменяем данные паспорта</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Изменяем данные паспорта</h1>
+
+    <div id="passport">
+        <p>Фамилия: <input type="text" id="surname" value="Иванов"></p>
+        <p>Имя: <input type="text" id="name" value="Иван"></p>
+        <p>Год рождения: <input type="text" id="birthYear" value="2000"></p>
+
+        <!-- личные данные, которые можно изменить -->
+        <p>Адрес: <input type="text" id="address" placeholder="Введите адрес"></p>
+        <p>Телефон: <input type="text" id="phone" placeholder="Введите телефон"></p>
+        <p>Электронная почта: <input type="email" id="email" placeholder="Введите email"></p>
+    </div>
+
+    <button id="changeBtn">Перевести в латиницу</button>
+
+    <script src="js/dom_change.js"></script>
+</body>
+</html>

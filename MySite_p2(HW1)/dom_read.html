@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Паспорт</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .passport { border: 1px solid #ccc; padding: 20px; width: 350px; margin-bottom: 20px; }
+    .form-group { margin-bottom: 10px; }
+    label { display: block; margin-bottom: 5px; }
+    input { width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 3px; }
+    button { padding: 10px 20px; background-color: #DC143C; color: white; border: none; border-radius: 3px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="passport">
+    <p>Фамилия: <span id="surname">Иванов</span></p>
+    <p>Имя: <span id="name">Иван</span></p>
+    <p>Год рождения: <span id="birthYear">2000</span></p>
+    <p>Адрес: <span id="address">ул. Ленина, д.1</span></p>
+    <p>Город: <span id="city">Москва</span></p>
+    <p>Серия и номер паспорта: <span id="series">1234</span></p>
+</div>
+
+<div class="form">
+    <div class="form-group">
+        <label for="inputAddress">Адрес:</label>
+        <input type="text" id="inputAddress" placeholder="Введите адрес">
+    </div>
+    <div class="form-group">
+        <label for="inputCity">Город:</label>
+        <input type="text" id="inputCity" placeholder="Введите город">
+    </div>
+    <div class="form-group">
+        <label for="inputSeries">Серия и номер паспорта:</label>
+        <input type="text" id="inputSeries" placeholder="Введите серию и номер паспорта">
+    </div>
+    <button id="updateBtn">Обновить паспорт</button>
+</div>
+
+<script>
+    const addressSpan = document.getElementById('address');
+    const citySpan = document.getElementById('city');
+    const seriesSpan = document.getElementById('series');
+
+    const inputAddress = document.getElementById('inputAddress');
+    const inputCity = document.getElementById('inputCity');
+    const inputSeries = document.getElementById('inputSeries');
+
+    const updateBtn = document.getElementById('updateBtn');
+
+    updateBtn.addEventListener('click', () => {
+        if(inputAddress.value) addressSpan.innerText = inputAddress.value;
+        if(inputCity.value) citySpan.innerText = inputCity.value;
+        if(inputSeries.value) seriesSpan.innerText = inputSeries.value;
+
+        // Очистка полей
+        inputAddress.value = '';
+        inputCity.value = '';
+        inputSeries.value = '';
+    });
+</script>
+
+</body>
+</html>

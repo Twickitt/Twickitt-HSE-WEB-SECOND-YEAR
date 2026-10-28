@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari - Заказ автомобиля</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"> Главная</a></li>
+            <li><a href="history.html"> История</a></li>
+            <li><a href="models.html"> Модели</a></li>
+            <li><a href="gallery.html"> Галерея</a></li>
+            <li><a href="order.html" class="image-link active"><img src="https://cdn-icons-png.flaticon.com/32/1077/1077114.png" alt="Контакты"></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Наши контакты и форма для покупки автомобиля</h1>
+
+        <!--внутренняя навигация -->
+        <div class="internal-nav">
+            <ul>
+                <li><a href="#section1">Форма для заказа</a></li>
+                <li><a href="#section2">Контакты</a></li>
+                <li><a href="#top">К началу страницы</a></li>
+            </ul>
+        </div>
+
+        <div id="top"></div>
+
+        <section id="section1">
+            <h2>Форма заказа автомобиля</h2>
+            <p>Заполните форму ниже, чтобы оставить заявку на покупку автомобиля. Мы свяжемся с вами в ближайшее время.</p>
+            
+            <div class="form-container">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label class="form-label" for="clientName">
+                            Ваше имя <span class="required">*</span>
+                        </label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="clientName" 
+                               name="client_name" 
+                               placeholder="Введите ваше имя и фамилия">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="clientEmail">
+                            Email <span class="required">*</span>
+                        </label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="clientEmail" 
+                               name="client_email" 
+                               placeholder="example@mail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="phoneNumber">
+                            Номер телефона
+                        </label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="phoneNumber" 
+                               name="phone_number" 
+                               placeholder="+7(111)111-111-11">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="modelName">
+                            Модель Ferrari <span class="required">*</span>
+                        </label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="modelName" 
+                               name="ferrari_model" 
+                               placeholder="Например: Ferrari 488 GTB">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="yearProduction">
+                            Год выпуска желаемого автомобиля
+                        </label>
+                        <input type="number" 
+                               class="form-control" 
+                               id="yearProduction" 
+                               name="production_year" 
+                               min="2000" 
+                               max="2025" 
+                               placeholder="2025">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="budgetAmount">
+                            Бюджет (в рублях)
+                        </label>
+                        <input type="number" 
+                               class="form-control" 
+                               id="budgetAmount" 
+                               name="budget_amount" 
+                               placeholder="Введите сумму в рублях">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            Предпочтительный способ связи <span class="required">*</span>
+                        </label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" 
+                                       id="contactPhone" 
+                                       name="contact_method" 
+                                       value="phone">
+                                <label for="contactPhone">Телефон</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" 
+                                       id="contactEmail" 
+                                       name="contact_method" 
+                                       value="email">
+                                <label for="contactEmail">Email</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" 
+                                       id="contactBoth" 
+                                       name="contact_method" 
+                                       value="both">
+                                <label for="contactBoth">Оба способа</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="orderComment">
+                            Дополнительные пожелания
+                        </label>
+                        <textarea class="form-control" 
+                                  id="orderComment" 
+                                  name="order_comment" 
+                                  rows="4" 
+                                  placeholder="Опишите ваши пожелания по цвету, комплектации и другим параметрам"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h2>Контакты</h2>
+            <div class="content-block">
+                <h3>Наши контакты:</h3>
+                <p><strong>Телефон:</strong> +7 (888) 888-88-88</p>
+                <p><strong>Email:</strong> info@ferrari.ru</p>
+                <p><strong>Адрес:</strong> Москва, ул. Пушкина, д. 22</p>
+                <p><strong>Режим работы:</strong> Пн-Пт: 10:00 - 20:00, Сб-Вс: 11:00 - 18:00</p>
+            </div>
+        </section>
+
+        <a href="#top" class="to-top">К началу страницы</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        //обработка автоматической отправки формы на email(использую сервис web3form)
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();                        
+            // получаем значения полей формы
+            const name = document.getElementById('clientName').value.trim();
+            const email = document.getElementById('clientEmail').value.trim();
+            const phone = document.getElementById('phoneNumber').value.trim();
+            const model = document.getElementById('modelName').value.trim();
+            const year = document.getElementById('yearProduction').value.trim();
+            const budget = document.getElementById('budgetAmount').value.trim();
+            const contactMethod = document.querySelector('input[name="contact_method"]:checked');
+            const comment = document.getElementById('orderComment').value.trim();
+            
+            // валидация заполненных полей с последующим выводом ошибки, если таковая присутствует 
+            // Проверяем каждое поле отдельно и показываем конкретное сообщение об ошибке
+            //проверка поля имя
+            if (!name) {
+                alert('Пожалуйста, введите ваше имя и фамилию.');
+                document.getElementById('clientName').focus(); //фокусируемся на поле с ошибкой
+                return false;
+            }
+            
+            //проверка поля Email
+            if (!email) {
+                alert('Пожалуйста, введите адрес электронной почты.');
+                document.getElementById('clientEmail').focus();
+                return false;
+            }
+            
+            //регулярное выражение для проверки email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Адрес электронной почты должен быть корректным.\n\nПример правильного email: example@mail.com');
+                document.getElementById('clientEmail').focus();
+                return false;
+            }
+            
+            //проверка поля модель Ferrari
+            if (!model) {
+                alert('Пожалуйста, укажите модель Ferrari, которую вы хотите приобрести.');
+                document.getElementById('modelName').focus();
+                return false;
+            }
+            
+            //проверка заполнения поля способ связи(радиокнопки)
+            if (!contactMethod) {
+                alert('Пожалуйста, выберите предпочтительный способ связи (телефон, email или оба способа).');
+                return false;
+            }
+            
+            //проверка поля года выпуска(должно быть в допустимом диапазоне)
+            if (year) {
+                const yearNum = parseInt(year);
+                if (isNaN(yearNum) || yearNum < 2010 || yearNum > 2024) {
+                    alert('Год выпуска должен быть числом от 2010 до 2024.');
+                    document.getElementById('yearProduction').focus();
+                    return false;
+                }
+            }
+            
+            let message = 'Новая заявка на покупку Ferrari\n\n';
+            message += 'Имя клиента: ' + name + '\n';
+            message += 'Email: ' + email + '\n';
+            if (phone) message += 'Телефон: ' + phone + '\n';
+            message += 'Модель Ferrari: ' + model + '\n';
+            if (year) message += 'Год выпуска: ' + year + '\n';
+            if (budget) message += 'Бюджет: ' + budget + ' руб.\n';
+            message += 'Способ связи: ' + contactMethod.value + '\n';
+            if (comment) message += '\nКомментарий:\n' + comment;
+            const submitButton = document.querySelector('.btn-submit');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Отправка...';
+            submitButton.disabled = true;
+            const formData = {
+                access_key: 'b325960b-5ef8-4037-840f-a65d8451e592', 
+                subject: 'Новая заявка на покупку Ferrari',
+                from_name: name, 
+                email: 'egormatch31@gmail.com',
+                message: message, 
+                //дополнительные данные для удобства обработки
+                client_name: name,
+                client_email: email,
+                ferrari_model: model,
+                contact_method: contactMethod.value
+            };
+            //не добавляем пустые необязательны поля
+            if (phone) formData.phone_number = phone;
+            if (year) formData.production_year = year;
+            if (budget) formData.budget_amount = budget;
+            if (comment) formData.order_comment = comment;
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', 
+                    'Accept': 'application/json' 
+                },
+                body: JSON.stringify(formData) 
+            })
+            .then(response => response.json()) 
+            .then(data => {
+    
+                if (data.success) {
+                    alert('Заявка успешно отправлена на email egormatch31@gmail.com!\n\nМы свяжемся с вами в ближайшее время.');
+                    document.getElementById('orderForm').reset();
+                } else {
+                    throw new Error(data.message || 'Ошибка отправки');
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка:', error); 
+                const subject = encodeURIComponent('Новая заявка на покупку Ferrari');
+                const body = encodeURIComponent(message);
+                window.location.href = 'mailto:egormatch31@gmail.com?subject=' + subject + '&body=' + body;
+                alert('Для автоматической отправки нужен ключ Web3Forms.\nОткроется почтовый клиент для отправки письма.');
+            })
+            .finally(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
+

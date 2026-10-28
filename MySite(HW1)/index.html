@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- заголовок для главной страницы Ferrari -->
+    <title>Ferrari - Официальный дилер в России</title>
+    <!-- подключение единого css файла для всех страниц -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <!-- логотип - графическая ссылка на главную страницу -->
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="photos/logo.png" alt="Логотип" class="logo-img">
+                        <span class="logo-text">Ferrari</span>
+                    </a>
+                </div>
+                
+                <!-- основное меню навигации -->
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <!-- обычные внутренние ссылки(открываются в том же окне) -->
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">О Ferrari</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link">Модели</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="info.html" class="nav-link">Информация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="forms.html" class="nav-link">Формы</a>
+                    </li>
+                    <!-- ссылка на закладку ведет к секции #team на странице about.html -->
+                    <li class="nav-item">
+                        <a href="about.html#team" class="nav-link">Команда</a>
+                    </li>
+                    <!-- внешние ссылки: target="_blank" открывает в новом окне -->
+                    <li class="nav-item">
+                        <a href="https://www.ferrari.com" target="_blank" class="nav-link external">Ferrari.com</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- основной контент страницы -->
+    <main>
+        <!-- главная секция с приветствием Ferrari -->
+        <section class="hero">
+            <div class="container">
+                <h1>Добро пожаловать в мир Ferrari!</h1>
+                <p>Официальный дилер Ferrari в России. Погрузитесь в мир итальянской страсти и скорости.</p>
+                <!-- кнопка-(сылка) для перехода к другой странице -->
+                <a href="about.html" class="btn btn-primary">Узнать историю Ferrari</a>
+            </div>
+        </section>
+
+        <!-- секция с основными преимуществами Ferrari -->
+        <section class="features">
+            <div class="container">
+                <h2>Почему выбирают Ferrari</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Легендарная история</h3>
+                        <p>75 лет инноваций и побед в Формуле 1</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Эксклюзивное обслуживание</h3>
+                        <p>Сервис мирового уровня для вашего Ferrari</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Невероятная производительность</h3>
+                        <p>Технологии будущего уже сегодня</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Ferrari Russia</p>
+        </div>
+    </footer>
+</body>
+</html>

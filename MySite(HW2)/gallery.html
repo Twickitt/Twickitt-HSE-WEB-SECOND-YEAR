@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari - Галерея</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"> Главная</a></li>
+            <li><a href="history.html"> История</a></li>
+            <li><a href="models.html"> Модели</a></li>
+            <li><a href="gallery.html" class="active"> Галерея</a></li>
+            <li><a href="order.html" class="image-link"><img src="https://cdn-icons-png.flaticon.com/32/1077/1077114.png" alt="Контакты"></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Галерея Ferrari</h1>
+
+        <!--внутренняя навигация -->
+        <div class="internal-nav">
+            <ul>
+                <li><a href="#section1">Коллекция автомобилей</a></li>
+                <li><a href="#section2">Детали и особенности</a></li>
+                <li><a href="#top">К началу страницы</a></li>
+            </ul>
+        </div>
+
+        <div id="top"></div>
+
+        <section id="section1">
+            <h2>Коллекция автомобилей</h2>
+            <p>Здесь представлены различные модели Ferrari с их характеристиками и особенностями.</p>
+            
+            <div class="gallery-grid" id="galleryContainer">
+                <!--блоки будут добавлены через JavaScript -->
+            </div>
+        </section>
+
+        <section id="section2">
+            <h2>Детали и особенности</h2>
+            <p>
+                Каждый автомобиль Ferrari уникален и имеет свои особенности. 
+                От мощных двигателей до изысканного дизайна - все продумано до мелочей.
+            </p>
+        </section>
+
+        <a href="#top" class="to-top">К началу страницы</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        //массив данных для повторяющихся блоков
+        const ferrariModels = [
+            {
+                name: "Ferrari 488 GTB",
+                image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Ferrari_488_GTB.jpg",
+                description: "Турбированный V8, 670 л.с., разгон до 100 км/ч за 3 секунды"
+            },
+            {
+                name: "Ferrari F8 Tributo",
+                image: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Ferrari_F8_Tributo_Genf_2019_1Y7A5665.jpg",
+                description: "Мощность 720 л.с., улучшенная аэродинамика, топовая модель"
+            },
+            {
+                name: "Ferrari Roma",
+                image: "https://www.exoticcarhacks.com/wp-content/uploads/2025/01/Used-2024-Ferrari-Roma-w-FULL-Stealth-PPF-Custom-Specs-Carbon-Driver-Zone-1731015795.jpg",
+                description: "Элегантный Гран Туризмо, 620 л.с., классический дизайн"
+            },
+            {
+                name: "Ferrari Portofino",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ferrari_Portofino_M_IMG_4351.jpg/1200px-Ferrari_Portofino_M_IMG_4351.jpg",
+                description: "Кабриолет с жесткой крышей, 600 л.с., комфорт и стиль"
+            },
+            {
+                name: "Ferrari SF90 Stradale",
+                image: "https://upload.wikimedia.org/wikipedia/commons/1/13/Red_2019_Ferrari_SF90_Stradale_%2848264238897%29_%28cropped%29.jpg",
+                description: "Гибридный суперкар, 1000 л.с., технология будущего"
+            },
+            {
+                name: "Ferrari 812 Superfast",
+                image: "https://www.exoticcarhacks.com/wp-content/uploads/2024/06/3b1741ddc79ae13bc9b2186a9ad76316.jpg",
+                description: "Атмосферный V12, 800 л.с., последний из великих V12"
+            },
+            {
+                name: "Ferrari LaFerrari",
+                image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/LaFerrari_in_Beverly_Hills_%2814563979888%29.jpg",
+                description: "Гиперкар с гибридной системой, 963 л.с., ограниченная серия"
+            },
+            {
+                name: "Ferrari California T",
+                image: "https://issimi-vehicles-cdn.b-cdn.net/publicamlvehiclemanagement/VehicleDetails/685/timestamped-1732782596470-1-2016-Ferrari-California-T-213380.jpg?width=3840&quality=75",
+                description: "Кабриолет для повседневной езды, 560 л.с., практичность"
+            },
+            {
+                name: "Ferrari 458 Italia",
+                image: "https://upload.wikimedia.org/wikipedia/commons/5/59/0_488_GTB.jpg",
+                description: "Классика Ferrari, 570 л.с., культовая модель"
+            },
+            {
+                name: "Ferrari 599 GTB",
+                image: "https://upload.wikimedia.org/wikipedia/commons/4/44/Ferrari599_A6_1.JPG",
+                description: "Гран Туризмо с V12, 620 л.с., роскошь и скорость"
+            },
+            {
+                name: "Ferrari 360 Modena",
+                image: "https://erclassics.b-cdn.net/media/catalog/product/f/e/ferrari-360-modena-2000-f1923-037.jpg",
+                description: "Легендарная модель, 400 л.с., начало новой эры"
+            },
+            {
+                name: "Ferrari F430",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ferrari_F430_front_20080605.jpg/1200px-Ferrari_F430_front_20080605.jpg",
+                description: "Эволюция 360, 490 л.с., совершенство формы"
+            }
+        ];
+
+        //функция для создания блока
+        function createGalleryItem(model) {
+            return `
+                <div class="gallery-item">
+                    <img src="${model.image}" alt="${model.name}" onerror="this.src='https://via.placeholder.com/400x200/DC143C/FFFFFF?text=Ferrari'">
+                    <h3>${model.name}</h3>
+                    <p>${model.description}</p>
+                </div>
+            `;
+        }
+
+        //добавление блоков в контейнер
+        const galleryContainer = document.getElementById('galleryContainer');
+        ferrariModels.forEach(model => {
+            galleryContainer.innerHTML += createGalleryItem(model);
+        });
+    </script>
+</body>
+</html>
+

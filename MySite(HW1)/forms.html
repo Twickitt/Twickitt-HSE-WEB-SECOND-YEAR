@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- заголовок для страницы с формами -->
+    <title>Формы Ferrari - Контакты и заказы</title>
+    <!-- подключение единого css файла для всех страниц -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <!-- логотип - графическая ссылка на главную страницу -->
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="photos/logo.png" alt="Логотип" class="logo-img">
+                        <span class="logo-text">Ferrari</span>
+                    </a>
+                </div>
+                
+                <!-- основное меню навигации -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">О Ferrari</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link">Модели</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="info.html" class="nav-link">Информация</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="forms.html" class="nav-link">Формы</a>
+                    </li>
+                    <!-- ссылка на закладку ведет к секции #team на странице about.html -->
+                    <li class="nav-item">
+                        <a href="about.html#team" class="nav-link">Команда</a>
+                    </li>
+                    <!-- внешние ссылки: target="_blank" открывает в новом окне -->
+                    <li class="nav-item">
+                        <a href="https://www.ferrari.com" target="_blank" class="nav-link external">Ferrari.com</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- основной контент страницы -->
+    <main>
+        <!-- заголовок страницы -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Формы Ferrari</h1>
+                <p>Оставьте заявку или закажите Ferrari</p>
+            </div>
+        </section>
+
+        <!-- форма 1: Контактные данные -->
+        <section class="forms-section">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Форма контактных данных</h2>
+                    <p>Оставьте свои контактные данные</p>
+                    
+                    <!-- форма для отправки контактных данных -->
+                    <form action="https://httpbin.org/post" method="POST" class="ferrari-form" id="contactForm">
+                        <!-- скрытое поле для идентификации формы -->
+                        <input type="hidden" name="form_type" value="contact_data">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastname">Фамилия *</label>
+                                <input type="text" id="lastname" name="lastname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname">Имя *</label>
+                                <input type="text" id="firstname" name="firstname" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mobile_phone">Мобильный телефон *</label>
+                                <input type="text" id="mobile_phone" name="mobile_phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Электронная почта *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message_date">Дата отправки сообщения *</label>
+                            <input type="date" id="message_date" name="message_date" required >
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- форма 2: Заказ Ferrari -->
+        <section class="forms-section">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Форма заказа Ferrari</h2>
+                    <p>Оформите заказ на Ferrari</p>
+                    
+                    <!-- работающая форма для заказа FERRARI -->
+                    <form action="https://httpbin.org/post" method="POST" class="ferrari-form" id="orderForm">
+                        <!-- скрытые поля -->
+                        <input type="hidden" name="form_type" value="ferrari_order">
+                        <input type="hidden" name="order_id" value="FERRARI-2026-001">
+                        
+                        <!-- личные данные -->
+                        <h3>Личные данные</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer_lastname">Фамилия *</label>
+                                <input type="text" id="customer_lastname" name="customer_lastname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer_firstname">Имя *</label>
+                                <input type="text" id="customer_firstname" name="customer_firstname" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer_age">Возраст</label>
+                                <input type="number" id="customer_age" name="customer_age" min="18" max="100" value="30">
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery_date">Дата доставки</label>
+                                <input type="date" id="delivery_date" name="delivery_date" value="2026-12-31">
+                            </div>
+                        </div>
+                        
+                        <!-- выбор модели Ferrari -->
+                        <h3>Выбор модели Ferrari</h3>
+                        <div class="form-group">
+                            <label>Модель автомобиля *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="ferrari_model" value="sf90_stradale" required>
+                                    <span>SF90 Stradale</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="ferrari_model" value="488_gtb" required>
+                                    <span>488 GTB</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="ferrari_model" value="roma" required>
+                                    <span>Roma</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- доп. опции -->
+                        <h3>Дополнительные опции</h3>
+                        <div class="form-group">
+                            <label>Выберите услуги:</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="additional_services[]" value="extended_warranty">
+                                    <span>Расширенная гарантия</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="additional_services[]" value="premium_service">
+                                    <span>Премиум сервис</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="additional_services[]" value="custom_paint">
+                                    <span>Индивидуальная покраска</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- финансовые данные -->
+                        <h3>Финансовые данные</h3>
+                        <div class="form-group">
+                            <label for="budget">Бюджет (руб.)</label>
+                            <input type="number" id="budget" name="budget" min="0" step="100000" value="15000000">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Оформить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Ferrari Russia</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript для работы форм -->
+    <script>
+        // установка текущей даты в форму контактов
+        document.addEventListener('DOMContentLoaded', function() {
+            const messageDateField = document.getElementById('message_date');
+            if (messageDateField) {
+                const today = new Date().toISOString().split('T')[0];
+                messageDateField.value = today;
+            }
+        });
+
+        // обработка отправки формы контактов
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Контактные данные отправлены!');
+        });
+
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Заказ Ferrari оформлен!');
+        });
+    </script>
+</body>
+</html>

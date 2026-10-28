@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- заголовок для информационной страницы Ferrari -->
+    <title>Информация о Ferrari - Технические характеристики</title>
+    <!-- подключение единого css файла для всех страниц -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <!-- логотип - графическая ссылка на главную страницу -->
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="photos/logo.png" alt="Логотип" class="logo-img">
+                        <span class="logo-text">Ferrari</span>
+                    </a>
+                </div>
+                
+                <!-- основное меню навигации -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">О Ferrari</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link">Модели</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="info.html" class="nav-link">Информация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="forms.html" class="nav-link">Формы</a>
+                    </li>
+                    <!-- ссылка на закладку ведет к секции #team на странице about.html -->
+                    <li class="nav-item">
+                        <a href="about.html#team" class="nav-link">Команда</a>
+                    </li>
+                    <!-- внешние ссылки: target="_blank" открывает в новом окне -->
+                    <li class="nav-item">
+                        <a href="https://www.ferrari.com" target="_blank" class="nav-link external">Ferrari.com</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- основной контент страницы -->
+    <main>
+        <!-- заголовок страницы -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Информация о Ferrari</h1>
+                <p>Подробная техническая информация и характеристики</p>
+            </div>
+        </section>
+
+        <!-- внутр. навигация с закладками -->
+        <section class="internal-nav">
+            <div class="container">
+                <nav class="page-nav">
+                    <h3>Навигация по странице:</h3>
+                    <ul class="page-nav-list">
+                        <li><a href="#section1">Раздел 1: История двигателей</a></li>
+                        <li><a href="#section2">Раздел 2: Технологии</a></li>
+                        <li><a href="#top">К началу страницы</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- история двигателей Ferrari -->
+        <section id="section1" class="content-section">
+            <div class="container">
+                <h2>История двигателей Ferrari</h2>
+                
+                <!-- нумерованный список -->
+                <h3>Этапы развития двигателей Ferrari:</h3>
+                <ol class="numbered-list">
+                    <li><strong>1947-1950:</strong> Первые V12 двигатели
+                        <ul class="nested-list">
+                            <li>125 S - первый автомобиль Ferrari</li>
+                            <li>Объем: 1.5 литра</li>
+                            <li>Мощность: 118 л.с.</li>
+                        </ul>
+                    </li>
+                    <li><strong>1950-1960:</strong> Эра классических V12
+                        <ul class="nested-list">
+                            <li>250 GT - легендарная модель</li>
+                            <li>Объем: 3.0 литра</li>
+                            <li>Мощность: 240 л.с.</li>
+                        </ul>
+                    </li>
+                    <li><strong>1960-1980:</strong> Переход к V8 двигателям
+                        <ul class="nested-list">
+                            <li>308 GTB - первый массовый V8</li>
+                            <li>Объем: 3.0 литра</li>
+                            <li>Мощность: 255 л.с.</li>
+                        </ul>
+                    </li>
+                    <li><strong>1980-2000:</strong> Турбированные двигатели
+                        <ul class="nested-list">
+                            <li>F40 - первый турбированный Ferrari</li>
+                            <li>Объем: 2.9 литра</li>
+                            <li>Мощность: 478 л.с.</li>
+                        </ul>
+                    </li>
+                    <li><strong>2000-настоящее время:</strong> Современные технологии
+                        <ul class="nested-list">
+                            <li>Гибридные системы</li>
+                            <li>Прямой впрыск топлива</li>
+                            <li>Системы изменения фаз газораспределения</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <!-- ненумерованный список -->
+                <h3>Ключевые особенности двигателей Ferrari:</h3>
+                <ul class="bullet-list">
+                    <li>Высокооборотные двигатели (до 9000 об/мин)</li>
+                    <li>Алюминиевые блоки цилиндров</li>
+                    <li>Титан в клапанных механизмах</li>
+                    <li>Системы принудительного наддува</li>
+                    <li>Экологичные гибридные технологии</li>
+                </ul>
+
+                <!-- большое изображение -->
+                <div class="image-section">
+                    <h3>Двигатель Ferrari F140 V12</h3>
+                    <img src="photos/ferrari-engine.jpg" alt="Двигатель Ferrari F140 V12" class="content-image">
+                    <p class="image-caption">
+                        <strong>Комментарий:</strong> Легендарный двигатель F140 V12 объемом 6.0 литра, 
+                        устанавливаемый на Ferrari 599 GTB Fiorano. Этот двигатель развивает мощность 
+                        620 л.с. и является одним из самых мощных атмосферных двигателей Ferrari.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технологии -->
+        <section id="section2" class="content-section">
+            <div class="container">
+                <h2>Современные технологии Ferrari</h2>
+                
+                <!-- таблица -->
+                <div class="table-section">
+                    <h3>Сравнение технологий Ferrari</h3>
+                    <table class="ferrari-table">
+                        <thead>
+                            <tr>
+                                <th>Технология</th>
+                                <th>Описание</th>
+                                <th>Применение</th>
+                                <th>Ссылки</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="photos/hybrid-tech.jpg" alt="Гибридная технология" class="table-image">
+                                    <strong>HY-KERS</strong>
+                                </td>
+                                <td>Гибридная система рекуперации кинетической энергии</td>
+                                <td>SF90 Stradale, LaFerrari</td>
+                                <td>
+                                    <a href="https://www.ferrari.com/en-EN/auto/sf90-stradale" target="_blank" class="table-link">
+                                        SF90 Stradale
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="photos/aerodynamics.jpg" alt="Аэродинамика" class="table-image">
+                                    <strong>Active Aero</strong>
+                                </td>
+                                <td>Активная аэродинамическая система</td>
+                                <td>488 Pista, F8 Tributo</td>
+                                <td>
+                                    <a href="https://www.ferrari.com/en-EN/auto/f8-tributo" target="_blank" class="table-link">
+                                        F8 Tributo
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="photos/suspension.jpg" alt="Подвеска" class="table-image">
+                                    <strong>SCM-E</strong>
+                                </td>
+                                <td>Магнитореологическая подвеска</td>
+                                <td>488 GTB, Roma</td>
+                                <td>
+                                    <a href="https://www.ferrari.com/en-EN/auto/roma" target="_blank" class="table-link">
+                                        Roma
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- миниатюры изображений -->
+                <div class="gallery-section">
+                    <h3>Галерея Ferrari</h3>
+                    <p>Нажмите на миниатюру для просмотра в полном размере:</p>
+                    
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail-item">
+                            <a href="photos/ferrari-large1.jpg" target="_blank" class="thumbnail-link">
+                                <img src="photos/ferrari-thumb1.jpg" alt="Ferrari SF90 Stradale" class="thumbnail">
+                                <span class="thumbnail-caption">SF90 Stradale</span>
+                            </a>
+                        </div>
+                        
+                        <div class="thumbnail-item">
+                            <a href="photos/ferrari-large2.jpg" target="_blank" class="thumbnail-link">
+                                <img src="photos/ferrari-thumb2.jpg" alt="Ferrari 488 GTB" class="thumbnail">
+                                <span class="thumbnail-caption">488 GTB</span>
+                            </a>
+                        </div>
+                        
+                        <div class="thumbnail-item">
+                            <a href="photos/ferrari-large3.jpg" target="_blank" class="thumbnail-link">
+                                <img src="photos/ferrari-thumb3.jpg" alt="Ferrari Roma" class="thumbnail">
+                                <span class="thumbnail-caption">Roma</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Ferrari Russia</p>
+        </div>
+    </footer>
+</body>
+</html>

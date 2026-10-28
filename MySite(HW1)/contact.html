@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- заголовок для страницы "Контакты Ferrari" -->
+    <title>Контакты Ferrari - Дилерские центры</title>
+    <!-- Подключение единого css файла для всех страниц -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="photos/logo.png" alt="Логотип" class="logo-img">
+                        <span class="logo-text">Ferrari</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">О Ferrari</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link">Модели</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="contact.html" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="info.html" class="nav-link">Информация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="forms.html" class="nav-link">Формы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html#team" class="nav-link">Команда</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.ferrari.com" target="_blank" class="nav-link external">Ferrari.com</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Контакты Ferrari Russia</h1>
+                <p>Свяжитесь с нами для покупки или обслуживания Ferrari</p>
+            </div>
+        </section>
+
+        <!-- основной контент страницы "Контакты Ferrari" -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Контактная информация</h2>
+                        <div class="contact-item">
+                            <h3>Телефон</h3>
+                            <p>+7 (888) 888-88-88</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>info@ferrari-russia.ru</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Адрес</h3>
+                            <p>г. Москва, Манежная площадь, 1, стр. 2<br>
+                            Дилерский центр Ferrari Moscow</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Время работы</h3>
+                            <p>Пн-Сб: 9:00 - 20:00<br>
+                            Вс: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h2>Записаться на тест-драйв</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="model">Интересующая модель</label>
+                                <select id="model" name="model" required>
+                                    <option value="">Выберите модель</option>
+                                    <option value="sf90">SF90 Stradale</option>
+                                    <option value="488">488 GTB</option>
+                                    <option value="roma">Roma</option>
+                                    <option value="other">Другая</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="4" ></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Записаться на тест-драйв</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
